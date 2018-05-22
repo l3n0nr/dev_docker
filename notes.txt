@@ -1,0 +1,53 @@
+Download docker
+	curl -fsSL https://get.docker.com/ | sh
+
+Show images docker
+	docker images
+
+Execute image (if not found, automatic download)
+	docker run 'nameimage' 
+
+Verify all process
+	docker ps -a
+
+Enter container docker suspending
+	docker attach "idcontainer"
+
+Create container
+	docker create "namecontainer"
+
+Container manipulation
+	docker start/stop/pause/unpause/rm/rmi
+		rm: remove container
+		rmi: remove image docker
+
+Port's manipulation(host - 80/guest - 80)
+	docker -ti -p 80:80 debian /bin/bash
+
+Manipulation services(start/stop/etc)
+	/etc/init.d/service "action"
+
+Verify services running : On docker container
+	ps -ef
+
+Verify stats ports : On docker container(install nicstat, if necessary)
+	netstat -atunp
+
+Commit modifications containers
+	docker commit "idcontainer" "namecontainer"
+
+Container execute commands, without log in container
+	docker exec "idcontainer" "namecontainer"
+
+Inspector container
+	docker inspector "idcontainer"
+
+Stats container
+	docker stats "idcontainer"
+
+Comments:
+Ctrl+P+Q: Suspending container
+-ti: Interactive terminal
+-d: "Daemon"
+
+
