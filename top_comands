@@ -1,0 +1,2 @@
+# build dockerfile : location dockerfile correct *-
+docker build .
