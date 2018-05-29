@@ -12,7 +12,6 @@ VirtualMachine =/= Container
 Dockerfile
 - Makeconfig
 - Steps execute task in docker container
-
 --------------------------
 
 

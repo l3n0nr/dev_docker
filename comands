@@ -21,10 +21,10 @@ Container manipulation
 		rm: remove container
 		rmi: remove image docker
 
-Port's manipulation(host - 80/guest - 80)
-	docker -ti -p 80:80 debian /bin/bash
+Port's manipulation(host - 80/guest - 8080)
+	docker -ti -p 8080:80 debian /bin/bash
 
-Manipulation services(start/stop/etc)
+Manipulation services(start/stop/pause)
 	/etc/init.d/service "action"
 
 Verify services running : On docker container
