@@ -2,11 +2,9 @@
 FROM debian
 
 # maintainer
-MAINTAINER lenonrmsouza@gmail.com
+MAINTAINER lenonr
 
 # config OS
 RUN apt update && \
-	apt install apache2 phpmyadmin \
-	mysql-server mysql-server php phpmyadmin -y && \ 
-	service apache2 restart && \	
+	apt install apache2 nano git \
 	apt clean 
