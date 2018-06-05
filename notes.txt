@@ -12,6 +12,13 @@ VirtualMachine =/= Container
 Dockerfile
 - Makeconfig
 - Steps execute task in docker container
+
+Boot
+## active in boot
+- systemctl enable docker.service
+
+## start service
+- systemctl start docker.service
 --------------------------
 
 
