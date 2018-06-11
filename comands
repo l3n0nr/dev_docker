@@ -23,6 +23,9 @@ Container manipulation
 
 Port's manipulation(host - 80/guest - 8080)
 	docker -ti -p 8080:80 debian /bin/bash
+	-ti = interactive terminal
+	-p  = port
+	-d  = daemon
 
 Manipulation services(start/stop/pause)
 	/etc/init.d/service "action"
