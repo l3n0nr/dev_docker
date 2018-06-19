@@ -1,0 +1,13 @@
+# Debian Server
+FROM debian
+
+# maintainer
+MAINTAINER lenonr
+
+# config OS
+RUN apt update && \
+	apt install apache2 && service apache2 restart \
+	apt install mysql-server mysql-server \
+	apt install php phpmyadmin \
+	apt install nano git \
+	apt clean 
