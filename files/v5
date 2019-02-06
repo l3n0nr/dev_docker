@@ -1,2 +1,11 @@
-FROM php:5.6-apache
-RUN docker-php-ext-install mysqli
+FROM debian
+
+MAINTAINER lenonr
+
+RUN apt update && \
+    apt install apache2 nano -y
+
+RUN ln -s /home/lenonr/Github/dev_web/SAFD:/var/www/html
+
+EXPOSE 80
+
