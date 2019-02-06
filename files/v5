@@ -4,8 +4,9 @@ FROM debian
 MAINTAINER lenonr
 
 RUN apt update && \
-    apt install apache2 nano -y &&
-    apachectl start
+    apt install apache2 nano -y
+
+CMD service apache2 start
 
 EXPOSE 80
 
