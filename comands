@@ -69,5 +69,3 @@ ADD "filehost" "localcontainer"
 
 Comments:
 Ctrl+P+Q: Suspending container
--ti: Interactive terminal
--d: "Daemon"
