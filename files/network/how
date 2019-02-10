@@ -1,0 +1,24 @@
+#### MANUAL
+## network container
+docker network create server_web
+
+## mysql container
+mkdir -p /opt/mysql
+####
+
+#### VIA TERMINAL
+## mysql container
+docker run -d \
+	--name web_mysql \
+	--network server_web \
+	-e MYSQL_ROOT_PASSWORD="mysqlpassword" \
+	-v /opt/mysql:/var/lib/myqsl \
+	-p 3306:3306 mysql:8.0.12
+
+## phpmyamdin container
+docker run -d \
+	--name web_php \
+	--network server_web \
+	-e PMA_HOST=web_mysql
+	-p 8080:80 \
+	phpmyadmin/phpmyadmin
